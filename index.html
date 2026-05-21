@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерьер — современная мебель</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        .container.center {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-img {
+            width: 42px;
+            height: 42px;
+            background: #a67c52;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .logo span {
+            font-size: 26px;
+            font-weight: 500;
+            color: #2c3e2f;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2c3e2f;
+            font-weight: 500;
+        }
+        nav a:hover { color: #a67c52; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1616486338818-3fdb0afbcfde?w=1200&h=500&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 760px;
+            margin: 0 auto;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .hero-sub {
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin-bottom: 32px;
+        }
+        .btn {
+            display: inline-block;
+            background: #a67c52;
+            color: white;
+            text-decoration: none;
+            padding: 12px 32px;
+            border-radius: 40px;
+        }
+        .btn:hover { background: #8b623f; }
+
+        /* Catalog */
+        .catalog {
+            padding: 70px 0;
+            background: #fefaf5;
+        }
+        .catalog h2 {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 400;
+            margin-bottom: 52px;
+            color: #2c3e2f;
+        }
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+            transition: 0.2s;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background: #d9d2c5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7a6a5a;
+            font-size: 14px;
+        }
+        .product-card h3 {
+            font-size: 20px;
+            margin: 18px 16px 10px;
+            color: #2c3e2f;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #5e5e5e;
+            margin: 0 16px 14px;
+            line-height: 1.4;
+        }
+        .price {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            color: #a67c52;
+            margin: 0 16px 22px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e2f;
+            color: #ece8e0;
+            text-align: center;
+            padding: 32px 0;
+        }
+        footer p { margin: 6px 0; font-size: 14px; }
+        .student { margin-top: 10px; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            header .container { flex-direction: column; gap: 14px; }
+            .hero h1 { font-size: 34px; }
+            .hero p { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container center">
+        <div class="logo">
+            <div class="logo-img">И</div>
+            <span>Интерьер.</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container center hero-content">
+        <h1>Всё, чего заслуживает ваш дом</h1>
+        <p>Наша мебель — ваше отражение</p>
+        <div class="hero-sub">СОВРЕМЕННЫЕ ДИЗАЙНЫ.</div>
+        <a href="#" class="btn">Обратитесь к каталогу</a>
+    </div>
+</section>
+
+<section class="catalog">
+    <div class="container center">
+        <h2>Каталог товаров</h2>
+        <div class="products-grid">
+            <!-- Кровать TATRAN -->
+            <div class="product-card">
+                <div class="product-img">Кровать TATRAN</div>
+                <h3>Кровать TATRAN</h3>
+                <p>Солнцезащитная кровать с мягким покрытием и удобной стойкой.</p>
+                <span class="price">120 000 руб.</span>
+            </div>
+            <!-- Кресло VILORA -->
+            <div class="product-card">
+                <div class="product-img">Кресло VILORA</div>
+                <h3>Кресло VILORA</h3>
+                <p>Легкое и уютное кресло с мягким покрытием и удобной стойкой.</p>
+                <span class="price">21 000 руб.</span>
+            </div>
+            <!-- Стол MENU -->
+            <div class="product-card">
+                <div class="product-img">Стол MENU</div>
+                <h3>Стол MENU</h3>
+                <p>Доступно в любой комнате: стол для обеднения, стол для работы или стол для отдыха.</p>
+                <span class="price">34 000 руб.</span>
+            </div>
+            <!-- Кресло ASKESTA -->
+            <div class="product-card">
+                <div class="product-img">Кресло ASKESTA</div>
+                <h3>Кресло ASKESTA</h3>
+                <p>Легкая кресло с мягким покрытием и удобной стойкой.</p>
+                <span class="price">68 000 руб.</span>
+            </div>
+            <!-- Стол NORMAN -->
+            <div class="product-card">
+                <div class="product-img">Стол NORMAN</div>
+                <h3>Стол NORMAN</h3>
+                <p>Легкий столик с мягким покрытием и удобной стойкой.</p>
+                <span class="price">40 000 руб.</span>
+            </div>
+            <!-- Диван NASTAN -->
+            <div class="product-card">
+                <div class="product-img">Диван NASTAN</div>
+                <h3>Диван NASTAN</h3>
+                <p>Легкая кровать с мягким покрытием и удобной стойкой.</p>
+                <span class="price">80 000 руб.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container center">
+        <p>© 2025 Интерьер. Все права защищены.</p>
+        <p class="student">Сайт был сверстан Дмитрий Бахарев</p>
+    </div>
+</footer>
+
+</body>
+</html>
